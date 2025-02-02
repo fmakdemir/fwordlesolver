@@ -1,4 +1,4 @@
-from wordlesolver.matcher import match
+from fwordlesolver.matcher import match
 
 
 def test_matches():

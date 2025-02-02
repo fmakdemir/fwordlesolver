@@ -1,12 +1,12 @@
 [project]
 name = "fwordlesolver"
 description = "Word puzzle solver library and CLI"
-version = "0.1.0"
+version = "0.1.1"
 license = { text = "MIT" }
 authors = [{ name = "Fma", email = "info@fmakdemir.com" }]
 readme = "README.md"
 keywords = ["wordle", "word", "solver", "cli", "library"]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dynamic = ["classifiers"]
 dependencies = ["typer>=0.15.0"]
 
@@ -36,6 +36,7 @@ classifiers = [
 [tool.poetry.group.dev.dependencies]
 pytest = "^8"
 ruff = "^0.9"
+pre-commit = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]

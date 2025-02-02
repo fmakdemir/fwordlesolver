@@ -1,13 +1,13 @@
 import typer
 
-from fwordlesolver.solver import Solver
+from fwordlesolver.solver import WordleSolver
 
 app = typer.Typer()
 
 
 @app.command()
 def solve(word_size: int = 4):
-    solver = Solver(word_size)
+    solver = WordleSolver(word_size)
     suffix = "\n " + "-" * word_size + "\n"
     while suggestions := solver.get_suggestions():
         print("Suggested: ", suggestions[:5])
@@ -19,7 +19,7 @@ def solve(word_size: int = 4):
         word = typer.prompt("Enter a word:", prompt_suffix=suffix)
         places = typer.prompt("", prompt_suffix="")
 
-        solver.filter_word(word, places)
+        solver.apply_guess(word, places)
 
 
 if __name__ == "__main__":

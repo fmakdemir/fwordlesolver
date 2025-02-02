@@ -2,6 +2,8 @@
 
 This project provides a Wordle solver that can be used as a command-line interface (CLI) tool or imported as a module in your Python code. SOWPODS is used as lexicon.
 
+Suggests new words that are most likely to reduce the total results. Can filter current list of words with
+
 ## Installation
 
 ### PyPI
@@ -36,18 +38,20 @@ You can run the Wordle solver from the command line. Use the following command:
 poetry run wordlesolver --count 6
 ```
 
-You can select the size of the word with 
+You can select the size of the word with
 
 ### Importing and Using the Solver
 
 You can also import the solver into your Python code:
 
 ```python
-from wordlesolver import WordleSolver
+from fwordlesolver.solver import WordleSolver
 
-solver = WordleSolver()
-solution = solver.solve('your_word')
-print(solution)
+solver = WordleSolver(6)
+print(solver.get_suggestions())
+
+solver.filter_word('blinks', '.x..x.')
+print(solver.get_suggestions())
 ```
 
 ### Running Tests

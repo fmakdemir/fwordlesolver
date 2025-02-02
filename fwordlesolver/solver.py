@@ -3,7 +3,7 @@ from collections import defaultdict
 from .data import all_words
 
 
-class Solver:
+class WordleSolver:
     def __init__(self, word_size: int):
         self.word_size = word_size
         self.words = [w for w in all_words if len(w) == word_size]
@@ -39,7 +39,7 @@ class Solver:
             if p not in "x.?":
                 raise TypeError(f"Invalid placement character: {p}")
 
-    def filter_word(self, word: str, places: str):
+    def apply_guess(self, word: str, places: str):
         word = word.strip().lower()
         places = places.strip().lower()
 
