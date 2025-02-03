@@ -9,15 +9,15 @@ Suggests new words that are most likely to reduce the total results. Can filter 
 ### PyPI
 
 ```
-pip install
+pip install fwordlesolver
 ```
 
 ### Manually
 Clone the repository and navigate to the project directory:
 
 ```sh
-git clone https://github.com/fmakdemir/wordle-solver.git
-cd wordle-solver
+git clone https://github.com/fmakdemir/fwordlesolver.git
+cd fwordlesolver
 ```
 
 Install Poetry if you haven't already. You can find the installation guide [here](https://python-poetry.org/docs/#installation).
@@ -35,7 +35,7 @@ poetry install
 You can run the Wordle solver from the command line. Use the following command:
 
 ```sh
-poetry run wordlesolver --count 6
+poetry run f-wordle-solver --word-size 6
 ```
 
 You can select the size of the word with
@@ -56,10 +56,12 @@ print(solver.get_suggestions())
 
 ### Running Tests
 
+This package uses [pytest](https://docs.pytest.org/) for running tests.
+
 To run the tests, use the following command:
 
 ```sh
-pytest tests/
+pytest
 ```
 
 This will execute all the test cases in the `tests` directory.
