@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.1.0...v0.2.0) (2025-02-03)
+
+
+### Features
+
+* updated release logic to work only on tags ([f044c0c](https://github.com/fmakdemir/fwordlesolver/commit/f044c0c181df1fb61866b66355928dc0ed29a1e1))
+
 ## 0.1.0 (2025-02-03)
 
 
