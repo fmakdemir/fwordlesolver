@@ -1,4 +1,4 @@
-name: CD - Release Please
+name: CD
 
 on:
   push:
@@ -37,6 +37,8 @@ jobs:
           poetry-version: ${{ matrix.poetry-version }}
       - name: View poetry --help
         run: poetry --help
+      - name: Authenticate
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
       - name: Install dependencies
         run: poetry install
       - name: Install dependencies
