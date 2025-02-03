@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.2.0...v0.2.1) (2025-02-03)
+
+
+### Bug Fixes
+
+* updated release logic ([53a36ef](https://github.com/fmakdemir/fwordlesolver/commit/53a36ef772040a43dba385791bac0eb739f15414))
+
 ## [0.2.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.1.0...v0.2.0) (2025-02-03)
 
 
