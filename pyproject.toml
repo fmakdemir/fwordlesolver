@@ -1,7 +1,7 @@
 [project]
 name = "fwordlesolver"
 description = "Word puzzle solver library and CLI"
-version = "0.2.1"
+version = "0.3.0"
 license = { text = "MIT" }
 authors = [{ name = "Fma", email = "info@fmakdemir.com" }]
 readme = "README.md"
