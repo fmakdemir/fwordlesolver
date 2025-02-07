@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.2.1...v0.3.0) (2025-02-07)
+
+
+### Features
+
+* added new alternative suggestion ([8b288b3](https://github.com/fmakdemir/fwordlesolver/commit/8b288b30a332ae6ba52bf6e0391112e7ca03b423))
+
 ## [0.2.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.2.0...v0.2.1) (2025-02-03)
 
 
