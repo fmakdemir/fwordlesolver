@@ -10,7 +10,8 @@ def solve(word_size: int = 4):
     solver = WordleSolver(word_size)
     suffix = "\n " + "-" * word_size + "\n"
     while suggestions := solver.get_suggestions():
-        print("Suggested: ", suggestions[:5])
+        print("Suggested: ", suggestions)
+        print("Alternate: ", solver.get_not_used_suggestion())
 
         if len(suggestions) < 2:
             print("Reached end: ", suggestions)

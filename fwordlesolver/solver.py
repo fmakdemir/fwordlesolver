@@ -7,13 +7,8 @@ class WordleSolver:
     def __init__(self, word_size: int):
         self.word_size = word_size
         self.words = [w for w in all_words if len(w) == word_size]
-        self.char_cnts = defaultdict(int)
-
-    def update_char_cnts(self):
-        self.char_cnts = defaultdict(int)
-        for w in self.words:
-            for c in set(w):
-                self.char_cnts[c] += 1
+        self.used_letters = set()
+        self.not_used_words = [*self.words]
 
     @property
     def len_words(self):
@@ -25,9 +20,18 @@ class WordleSolver:
             for c in set(word)
         )
 
-    def get_suggestions(self):
-        self.update_char_cnts()
-        return sorted(self.words, key=self.get_score)[-5:][::-1]
+    def get_suggestions(self, n=5):
+        """Returns the 5 words with the highest score"""
+        self.char_cnts = defaultdict(int)
+        for w in self.words:
+            for c in set(w):
+                self.char_cnts[c] += 1
+
+        return sorted(self.words, key=self.get_score)[-n:][::-1]
+
+    def get_not_used_suggestion(self):
+        """Returns the 5 words with words not guessed letters"""
+        return sorted(self.not_used_words, key=lambda k: len(set(k)))[-5:][::-1]
 
     def filter_words(self, check_func: lambda x: bool):
         self.words = [w for w in self.words if check_func(w)]
@@ -45,8 +49,13 @@ class WordleSolver:
 
         self.validate_inputs(word, places)
 
+        self.used_letters.update(set(word))
+        self.not_used_words = [
+            w for w in self.not_used_words if not self.used_letters.intersection(set(w))
+        ]
+
         for i, (c, p) in enumerate(zip(word, places)):
-            len_words = len(self.words)
+            # len_words = len(self.words)
             if p == "x":
                 self.filter_words(lambda w: w[i] == c)
             if p == "?":
@@ -54,7 +63,7 @@ class WordleSolver:
             if p == ".":
                 hits = sum(1 for (_c, _p) in zip(word, places) if _p != "." and _c == c)
                 self.filter_words(lambda w: w.count(c) <= hits)
-            print(f"Filtered {c}{p} from {len_words} to {len(self.words)}")
-        print("-" * 20)
-        print(self.words)
-        print("-" * 20)
+            # print(f"Filtered {c}{p} from {len_words} to {len(self.words)}")
+        # print("-" * 20)
+        # print(self.words)
+        # print("-" * 20)

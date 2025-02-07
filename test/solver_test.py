@@ -35,12 +35,29 @@ def test_solver_score():
     COUNT = 3
     solver = WordleSolver(COUNT)
     solver.words = ["abc", "aba", "bad", "ced", "abe", "zen"]
-    scores = [12, 8, 12, 14, 14, 10]
+    expected_scores = [12, 8, 12, 14, 14, 10]
 
-    solver.update_char_cnts()
+    # trigger score pre-calculation
+    solver.get_suggestions(len(solver.words))
 
-    for w, s in zip(solver.words, scores):
+    for w, s in zip(solver.words, expected_scores):
         assert solver.get_score(w) == s
 
     sugg = solver.get_suggestions()
     assert sugg == ["abe", "ced", "bad", "abc", "zen"]
+
+
+def test_solver_used_letters():
+    COUNT = 5
+    solver = WordleSolver(COUNT)
+    solver.apply_guess("abcde", "xxxxx")
+    assert solver.used_letters == set("abcde")
+    solver.apply_guess("abfgh", "xxxxx")
+    assert solver.used_letters == set("abcdefgh")
+    solver.apply_guess("cvced", "xxxxx")
+    assert solver.used_letters == set("abcdefghv")
+
+    sugg = solver.get_not_used_suggestion()
+    print(sugg)
+    for s in sugg:
+        assert not any(c in solver.used_letters for c in s)
