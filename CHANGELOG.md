@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.0...v0.4.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* changed publish trigger ([7d63fa9](https://github.com/fmakdemir/fwordlesolver/commit/7d63fa9ece17efb7627fb38b45d2bfb4c982c37b))
+* test ([4e9a6ca](https://github.com/fmakdemir/fwordlesolver/commit/4e9a6cab9d8bdbab0841c4329c13fceb076e4b0f))
+
 ## [0.4.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.4...v0.4.0) (2025-02-08)
 
 
