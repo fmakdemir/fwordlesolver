@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build-release:
-    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
     name: Build Package Release
     strategy:
       fail-fast: false
