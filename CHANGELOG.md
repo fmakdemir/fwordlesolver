@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.2.0...v0.3.0) (2025-02-08)
+
+
+### Features
+
+* version bump ([4581cf6](https://github.com/fmakdemir/fwordlesolver/commit/4581cf6ef74a48073d3b5d85d95580ab644efdf8))
+
 ## [0.2.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.1.0...v0.2.0) (2025-02-08)
 
 
