@@ -3,7 +3,7 @@ name: 🐍 Publish Python Package
 on:
   push:
     branches: [main]
-    tags: ["*"]
+    tags: ["v*"]
 
 concurrency:
   cancel-in-progress: true
