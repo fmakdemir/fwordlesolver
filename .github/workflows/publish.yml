@@ -1,8 +1,9 @@
 name: 🐍 Publish Python Package
 
 on:
-  push:
-    branches: [main]
+  release:
+    types:
+      - created
 
 concurrency:
   cancel-in-progress: true
@@ -10,25 +11,15 @@ concurrency:
 
 jobs:
   publish-package:
-    # trigger only if bot is the author of the commit
-    if: ${{ github.event.head_commit.author.username == 'github-actions[bot]' }}
     name: 📦 Publish Package
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9"] # , "3.10", "3.11", "3.12", "3.13"]
-        poetry-version: ["latest"] # , "main", "1.8.4"]
-        os: [ubuntu-latest] # , macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.12
       - name: 📦 Setup poetry
         uses: abatilo/actions-poetry@v3
-        with:
-          poetry-version: ${{ matrix.poetry-version }}
       - name: 🔑 Authenticate
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
       - name: 📜 Install dependencies
