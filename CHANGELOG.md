@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.0...v0.3.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* fixed CI/CD triggers ([62fee30](https://github.com/fmakdemir/fwordlesolver/commit/62fee30bad919d9ef1255a25f72833193ea17115))
+* split CI/CD ([5eaafb7](https://github.com/fmakdemir/fwordlesolver/commit/5eaafb71abcc7eccff3cc67f28fbcb4075f36e9f))
+
 ## [0.3.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.2.1...v0.3.0) (2025-02-07)
 
 
