@@ -29,4 +29,4 @@ jobs:
         with:
           release-type: python
       - name: Check ref
-        run: "echo 'Ref: ${{ github.ref }}'"
+        run: "echo 'Ref: ${{ toJson(github) }}'"
