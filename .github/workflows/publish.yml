@@ -2,8 +2,8 @@ name: 🐍 Publish Python Package
 
 on:
   push:
-    branches: [main]
-    tags: ["v*"]
+    tags:
+      - v*
 
 concurrency:
   cancel-in-progress: true
@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   release-please:
+    if: ${{ github.ref == 'refs/heads/main' }}
     name: 📦 Publish Package
     strategy:
       fail-fast: false
@@ -28,8 +29,6 @@ jobs:
         uses: abatilo/actions-poetry@v3
         with:
           poetry-version: ${{ matrix.poetry-version }}
-      - name: ✅ View poetry --help
-        run: poetry --help
       - name: 🔑 Authenticate
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
       - name: 📜 Install dependencies
