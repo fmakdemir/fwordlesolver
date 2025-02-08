@@ -1,0 +1,25 @@
+name: 🏷️ Create Tag Release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+jobs:
+  version-release:
+    # trigger only if bot is not the author of the commit
+    # if: ${{ github.event.head_commit.author.username != 'github-actions[bot]' }}
+    name: Running release-please
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: python
