@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.7](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.6...v0.4.7) (2025-02-08)
+
+
+### Bug Fixes
+
+* test CD ([acd27fc](https://github.com/fmakdemir/fwordlesolver/commit/acd27fcbc3100ed7009c65baafe9c9637cb20229))
+
 ## [0.4.6](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.5...v0.4.6) (2025-02-08)
 
 
