@@ -2,7 +2,8 @@ name: CD
 
 on:
   push:
-    tags: ["v*"]
+    tags:
+      - "*"
 
 permissions:
   contents: write
