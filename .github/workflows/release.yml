@@ -1,4 +1,4 @@
-name: CI
+name: 📦 Build Package Release
 
 on:
   push:
@@ -13,8 +13,8 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}
 
 jobs:
-  release-please:
-    name: Release Please
+  build-release:
+    name: Build Package Release
     strategy:
       fail-fast: false
       matrix:
