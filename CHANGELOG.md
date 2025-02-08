@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.1...v0.3.2) (2025-02-08)
+
+
+### Bug Fixes
+
+* changed tag filter on CI/CD ([6d7e425](https://github.com/fmakdemir/fwordlesolver/commit/6d7e42589065a10cb4eec08b198328fb192bc13d))
+
 ## [0.3.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.0...v0.3.1) (2025-02-08)
 
 
