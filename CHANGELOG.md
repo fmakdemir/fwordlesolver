@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.1...v0.4.2) (2025-02-08)
+
+
+### Bug Fixes
+
+* added tag filter to builds ([0f46826](https://github.com/fmakdemir/fwordlesolver/commit/0f468266b6b396112fc7a836f92f60f5c7d65418))
+* fixed tag filtering ([abb74f3](https://github.com/fmakdemir/fwordlesolver/commit/abb74f31f804591227fc2a8b2a8c152760d2d29a))
+
 ## [0.4.1](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.0...v0.4.1) (2025-02-08)
 
 
