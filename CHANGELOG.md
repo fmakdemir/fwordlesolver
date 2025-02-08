@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.8](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.7...v0.4.8) (2025-02-08)
+
+
+### Bug Fixes
+
+* removed matrix from publish workflow, changed publish to release ([92b0f35](https://github.com/fmakdemir/fwordlesolver/commit/92b0f35b103dd7df3a5ca9a8b6f386051dec6a3c))
+
 ## [0.4.7](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.6...v0.4.7) (2025-02-08)
 
 
