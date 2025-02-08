@@ -1,12 +1,9 @@
 name: CD
 
 on:
-  release:
-    types: [released]
-
-permissions:
-  contents: write
-  pull-requests: write
+  push:
+    branches: [main]
+    tags: ["*"]
 
 concurrency:
   cancel-in-progress: true
