@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0 (2025-02-08)
+
+
+### Features
+
+* reset the git history ([2e5cea4](https://github.com/fmakdemir/fwordlesolver/commit/2e5cea4d17724eacb97ab8819f2b46c5e3554330))
+
 ## [0.4.8](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.7...v0.4.8) (2025-02-08)
 
 
