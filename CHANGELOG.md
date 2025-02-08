@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.3...v0.4.4) (2025-02-08)
+
+
+### Bug Fixes
+
+* debug github vars ([7fcf73b](https://github.com/fmakdemir/fwordlesolver/commit/7fcf73bae2ad73b722d4edb064520311b706c28a))
+
 ## [0.4.3](https://github.com/fmakdemir/fwordlesolver/compare/v0.4.2...v0.4.3) (2025-02-08)
 
 
