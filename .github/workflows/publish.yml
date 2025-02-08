@@ -1,0 +1,32 @@
+name: 🐍 Publish Python Package to PyPi
+
+on:
+  release:
+    types: [released]
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+
+jobs:
+  publish-package:
+    name: 📦 Publish Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: 📦 Setup poetry
+        uses: abatilo/actions-poetry@v3
+
+      - name: 🔑 Authenticate
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
+      - name: 📜 Install dependencies
+        run: poetry install
+
+      - name: 📤 Publish package
+        run: poetry publish --build
