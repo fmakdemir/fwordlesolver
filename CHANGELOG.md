@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.4...v0.4.0) (2025-02-08)
+
+
+### Features
+
+* testing CD ([303c148](https://github.com/fmakdemir/fwordlesolver/commit/303c148fa0162a52e7be779e52c4b75b75a20a9e))
+
 ## [0.3.4](https://github.com/fmakdemir/fwordlesolver/compare/v0.3.3...v0.3.4) (2025-02-08)
 
 
