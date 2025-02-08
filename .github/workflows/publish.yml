@@ -1,4 +1,4 @@
-name: 🐍 Publish Python Package
+name: 🐍 Publish Python Package to PyPi
 
 on:
   release:
@@ -15,14 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
+
       - name: 📦 Setup poetry
         uses: abatilo/actions-poetry@v3
+
       - name: 🔑 Authenticate
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
       - name: 📜 Install dependencies
         run: poetry install
-      - name: 📤 Publich package
+
+      - name: 📤 Publish package
         run: poetry publish --build
